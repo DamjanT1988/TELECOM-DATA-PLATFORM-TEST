@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.125.7-ext-alpine
+FROM klakegg/hugo:ext-alpine
 
 WORKDIR /workspace/frontend/hugo-site
 
