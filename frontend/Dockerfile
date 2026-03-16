@@ -7,4 +7,4 @@ COPY docs /workspace/docs
 
 EXPOSE 1313
 
-CMD ["hugo", "server", "--bind", "0.0.0.0", "--baseURL", "http://localhost:1313", "--disableFastRender"]
+CMD ["server", "--bind", "0.0.0.0", "--baseURL", "http://localhost:1313", "--disableFastRender"]

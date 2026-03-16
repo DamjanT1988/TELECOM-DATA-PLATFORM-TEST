@@ -1,6 +1,8 @@
 import logging
+import time
 
 from flask import Flask, jsonify
+from sqlalchemy.exc import OperationalError
 
 from app.config import Config
 from app.extensions import db
@@ -18,8 +20,7 @@ def create_app(test_config=None):
     db.init_app(app)
 
     with app.app_context():
-        # Lightweight auto-create for local/demo use.
-        db.create_all()
+        _initialize_database_with_retry(app)
         seed_if_empty()
 
     register_blueprints(app)
@@ -49,3 +50,22 @@ def _register_cors(app):
         response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization"
         response.headers["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS"
         return response
+
+
+def _initialize_database_with_retry(app):
+    # Compose startup can race DNS/DB readiness; retry avoids crash-looping.
+    retries = 15
+    delay_seconds = 2
+    for attempt in range(1, retries + 1):
+        try:
+            # Lightweight auto-create for local/demo use.
+            db.create_all()
+            return
+        except OperationalError as exc:
+            if attempt == retries:
+                app.logger.exception("Database initialization failed after retries")
+                raise
+            app.logger.warning(
+                "Database not ready (attempt %s/%s): %s", attempt, retries, exc
+            )
+            time.sleep(delay_seconds)
