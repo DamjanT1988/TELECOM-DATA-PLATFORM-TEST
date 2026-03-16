@@ -1,40 +1,16 @@
 from datetime import date
+from pathlib import Path
 
 from app.extensions import db
 from models.kpi import KPI
 from models.site import Site
+from parsers.csv_parser import parse_sites_csv
+from services.site_service import upsert_sites
 
 
 def seed_if_empty():
     if Site.query.count() == 0:
-        db.session.add_all(
-            [
-                Site(
-                    site_id="101",
-                    region="Stockholm",
-                    latitude=59.3293,
-                    longitude=18.0686,
-                    signal_strength=-72.0,
-                    status="active",
-                ),
-                Site(
-                    site_id="102",
-                    region="Gothenburg",
-                    latitude=57.7089,
-                    longitude=11.9746,
-                    signal_strength=-65.0,
-                    status="active",
-                ),
-                Site(
-                    site_id="103",
-                    region="Malmo",
-                    latitude=55.6050,
-                    longitude=13.0038,
-                    signal_strength=-69.0,
-                    status="maintenance",
-                ),
-            ]
-        )
+        _seed_sites_from_realistic_csv()
 
     if KPI.query.count() == 0:
         db.session.add_all(
@@ -97,3 +73,41 @@ def seed_if_empty():
         )
 
     db.session.commit()
+
+
+def _seed_sites_from_realistic_csv():
+    csv_path = Path(__file__).resolve().parents[1] / "data" / "realistic_sites.csv"
+    if csv_path.exists():
+        rows = parse_sites_csv(csv_path.read_text(encoding="utf-8"))
+        upsert_sites(rows)
+        return
+
+    # Safe fallback if data file is missing.
+    db.session.add_all(
+        [
+            Site(
+                site_id="101",
+                region="Stockholm",
+                latitude=59.3293,
+                longitude=18.0686,
+                signal_strength=-72.0,
+                status="active",
+            ),
+            Site(
+                site_id="102",
+                region="Gothenburg",
+                latitude=57.7089,
+                longitude=11.9746,
+                signal_strength=-65.0,
+                status="active",
+            ),
+            Site(
+                site_id="103",
+                region="Malmo",
+                latitude=55.6050,
+                longitude=13.0038,
+                signal_strength=-69.0,
+                status="maintenance",
+            ),
+        ]
+    )

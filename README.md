@@ -9,6 +9,8 @@ Fullstack telecom data platform simulation with:
 - GitHub Actions CI pipeline
 - Docs-as-code rendered into Hugo
 
+Default startup behavior seeds sites from `backend/data/realistic_sites.csv`.
+
 ## Project Structure
 
 ```text
@@ -24,14 +26,39 @@ docker-compose.yml
 ## Quick Start
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 Open:
 
 - Frontend: http://localhost:1313
-- Backend API: http://localhost:5000/api/health
+- Backend API health: http://localhost:5000/api/health
 - PostgreSQL (host): localhost:5433
+
+Note: `http://localhost:5000/` intentionally returns `404`. API routes are under `/api/*`.
+
+## Default Data Behavior
+
+- On first startup (empty DB), site data is seeded from `backend/data/realistic_sites.csv`.
+- KPI seed data is inserted for demo dashboards.
+- If you already have old data, reset once to re-seed defaults:
+
+```bash
+docker compose down -v
+docker compose up --build
+```
+
+## Test Dataset Files
+
+- Small sample:
+  - `backend/data/sample_sites.csv`
+  - `backend/data/sample_sites.json`
+- Realistic medium:
+  - `backend/data/realistic_sites.csv`
+  - `backend/data/realistic_sites.json`
+- Large load/perf:
+  - `backend/data/large_sites_5000.csv`
+  - `backend/data/large_sites_2000.json`
 
 ## Key API Endpoints
 
