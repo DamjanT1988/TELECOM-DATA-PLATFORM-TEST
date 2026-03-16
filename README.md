@@ -31,6 +31,7 @@ Open:
 
 - Frontend: http://localhost:1313
 - Backend API: http://localhost:5000/api/health
+- PostgreSQL (host): localhost:5433
 
 ## Key API Endpoints
 

@@ -14,7 +14,7 @@ Services:
 
 - Frontend (Hugo): `http://localhost:1313`
 - Backend (Flask): `http://localhost:5000`
-- PostgreSQL: `localhost:5432`
+- PostgreSQL: `localhost:5433`
 
 ## Runtime behavior
 

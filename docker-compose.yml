@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: telecom
       POSTGRES_DB: telecom_platform
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
       - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
