@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section>
+  <h2>Telecom KPI Dashboard</h2>
+  <p>Live KPI metrics from the backend API.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Uptime by Region (%)</h3>
+      <canvas id="uptimeChart"></canvas>
+    </div>
+    <div class="card">
+      <h3>Latency Trends (ms)</h3>
+      <canvas id="latencyChart"></canvas>
+    </div>
+    <div class="card">
+      <h3>Traffic Distribution</h3>
+      <canvas id="trafficChart"></canvas>
+    </div>
+  </div>
+</section>
+<script src="/js/api.js"></script>
+<script src="/js/dashboard.js"></script>
+{{ end }}

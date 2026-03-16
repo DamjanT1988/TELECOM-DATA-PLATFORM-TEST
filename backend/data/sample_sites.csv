@@ -1,0 +1,4 @@
+site_id,region,latitude,longitude,signal_strength,status
+101,Stockholm,59.3293,18.0686,-72,active
+102,Gothenburg,57.7089,11.9746,-65,active
+103,Malmo,55.6050,13.0038,-69,maintenance

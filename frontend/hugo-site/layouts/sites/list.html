@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section>
+  <h2>Network Sites</h2>
+  <label for="regionFilter">Filter by region:</label>
+  <select id="regionFilter">
+    <option value="">All regions</option>
+  </select>
+
+  <div class="card table-wrap">
+    <table id="sitesTable">
+      <thead>
+        <tr>
+          <th>Site ID</th>
+          <th>Region</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Signal Strength</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+<script src="/js/api.js"></script>
+<script src="/js/sites.js"></script>
+{{ end }}

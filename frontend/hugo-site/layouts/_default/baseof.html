@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    window.TELECOM_API_BASE = "{{ .Site.Params.apiBaseUrl }}";
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1>{{ .Site.Title }}</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard/">Dashboard</a>
+      <a href="/sites/">Network Sites</a>
+      <a href="/reports/">Reports</a>
+      <a href="/documentation/">Documentation</a>
+    </nav>
+  </header>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

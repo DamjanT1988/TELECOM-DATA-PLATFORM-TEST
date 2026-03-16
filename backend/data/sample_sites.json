@@ -1,0 +1,18 @@
+[
+  {
+    "site_id": "104",
+    "region": "Stockholm",
+    "latitude": 59.34,
+    "longitude": 18.07,
+    "signal_strength": -68,
+    "status": "active"
+  },
+  {
+    "site_id": "105",
+    "region": "Gothenburg",
+    "latitude": 57.71,
+    "longitude": 11.97,
+    "signal_strength": -66,
+    "status": "active"
+  }
+]
