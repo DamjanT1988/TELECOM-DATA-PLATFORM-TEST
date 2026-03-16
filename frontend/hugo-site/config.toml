@@ -1,7 +1,6 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "Telecom Data Platform"
-theme = ""
 
 [params]
   apiBaseUrl = "http://localhost:5000"
@@ -11,10 +10,3 @@ theme = ""
     [markup.goldmark.renderer]
       unsafe = true
 
-[module]
-  [[module.mounts]]
-    source = "content"
-    target = "content"
-  [[module.mounts]]
-    source = "../../docs"
-    target = "content/documentation"

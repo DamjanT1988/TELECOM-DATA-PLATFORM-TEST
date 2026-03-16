@@ -3,7 +3,7 @@ FROM klakegg/hugo:ext-alpine
 WORKDIR /workspace/frontend/hugo-site
 
 COPY frontend/hugo-site /workspace/frontend/hugo-site
-COPY docs /workspace/docs
+COPY docs /workspace/frontend/hugo-site/content/documentation
 
 EXPOSE 1313
 
