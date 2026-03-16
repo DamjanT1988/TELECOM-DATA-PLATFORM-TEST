@@ -1,4 +1,4 @@
-# TELECOM-DATA-PLATFORM-TEST
+# Telecom Advanced Data Platform
 
 Fullstack telecom data platform simulation with:
 
