@@ -1,0 +1,202 @@
+[
+  {
+    "site_id": "3001",
+    "region": "Stockholm",
+    "latitude": 59.3331,
+    "longitude": 18.0586,
+    "signal_strength": -66,
+    "status": "active"
+  },
+  {
+    "site_id": "3002",
+    "region": "Stockholm",
+    "latitude": 59.3254,
+    "longitude": 18.0932,
+    "signal_strength": -77,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3003",
+    "region": "Stockholm",
+    "latitude": 59.3482,
+    "longitude": 18.0249,
+    "signal_strength": -89,
+    "status": "maintenance"
+  },
+  {
+    "site_id": "3004",
+    "region": "Gothenburg",
+    "latitude": 57.7069,
+    "longitude": 11.9668,
+    "signal_strength": -68,
+    "status": "active"
+  },
+  {
+    "site_id": "3005",
+    "region": "Gothenburg",
+    "latitude": 57.7224,
+    "longitude": 11.9887,
+    "signal_strength": -80,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3006",
+    "region": "Gothenburg",
+    "latitude": 57.6895,
+    "longitude": 12.0104,
+    "signal_strength": -93,
+    "status": "offline"
+  },
+  {
+    "site_id": "3007",
+    "region": "Malmo",
+    "latitude": 55.6078,
+    "longitude": 13.0011,
+    "signal_strength": -69,
+    "status": "active"
+  },
+  {
+    "site_id": "3008",
+    "region": "Malmo",
+    "latitude": 55.5949,
+    "longitude": 13.0267,
+    "signal_strength": -83,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3009",
+    "region": "Malmo",
+    "latitude": 55.5772,
+    "longitude": 13.0414,
+    "signal_strength": -96,
+    "status": "maintenance"
+  },
+  {
+    "site_id": "3010",
+    "region": "Uppsala",
+    "latitude": 59.8619,
+    "longitude": 17.6401,
+    "signal_strength": -65,
+    "status": "active"
+  },
+  {
+    "site_id": "3011",
+    "region": "Uppsala",
+    "latitude": 59.8728,
+    "longitude": 17.6689,
+    "signal_strength": -82,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3012",
+    "region": "Uppsala",
+    "latitude": 59.8433,
+    "longitude": 17.6184,
+    "signal_strength": -90,
+    "status": "maintenance"
+  },
+  {
+    "site_id": "3013",
+    "region": "Vasteras",
+    "latitude": 59.6092,
+    "longitude": 16.5487,
+    "signal_strength": -70,
+    "status": "active"
+  },
+  {
+    "site_id": "3014",
+    "region": "Vasteras",
+    "latitude": 59.6201,
+    "longitude": 16.5694,
+    "signal_strength": -85,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3015",
+    "region": "Vasteras",
+    "latitude": 59.5968,
+    "longitude": 16.5202,
+    "signal_strength": -92,
+    "status": "maintenance"
+  },
+  {
+    "site_id": "3016",
+    "region": "Orebro",
+    "latitude": 59.2732,
+    "longitude": 15.2139,
+    "signal_strength": -72,
+    "status": "active"
+  },
+  {
+    "site_id": "3017",
+    "region": "Orebro",
+    "latitude": 59.2867,
+    "longitude": 15.1968,
+    "signal_strength": -84,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3018",
+    "region": "Orebro",
+    "latitude": 59.2651,
+    "longitude": 15.2330,
+    "signal_strength": -94,
+    "status": "offline"
+  },
+  {
+    "site_id": "3019",
+    "region": "Linkoping",
+    "latitude": 58.4119,
+    "longitude": 15.6243,
+    "signal_strength": -67,
+    "status": "active"
+  },
+  {
+    "site_id": "3020",
+    "region": "Linkoping",
+    "latitude": 58.3982,
+    "longitude": 15.6495,
+    "signal_strength": -79,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3021",
+    "region": "Linkoping",
+    "latitude": 58.4237,
+    "longitude": 15.6068,
+    "signal_strength": -91,
+    "status": "maintenance"
+  },
+  {
+    "site_id": "3022",
+    "region": "Lulea",
+    "latitude": 65.5868,
+    "longitude": 22.1581,
+    "signal_strength": -73,
+    "status": "active"
+  },
+  {
+    "site_id": "3023",
+    "region": "Lulea",
+    "latitude": 65.6034,
+    "longitude": 22.1836,
+    "signal_strength": -88,
+    "status": "degraded"
+  },
+  {
+    "site_id": "3024",
+    "region": "Umea",
+    "latitude": 63.8272,
+    "longitude": 20.2673,
+    "signal_strength": -71,
+    "status": "active"
+  },
+  {
+    "site_id": "3025",
+    "region": "Umea",
+    "latitude": 63.8396,
+    "longitude": 20.2991,
+    "signal_strength": -87,
+    "status": "degraded"
+  }
+]
